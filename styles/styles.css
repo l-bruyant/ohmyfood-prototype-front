@@ -30,6 +30,7 @@ body {
 
 h1, h2 {
   font-family: roboto-bold, arial, sans-serif;
+  font-weight: normal;
   margin: 0;
   padding: 0;
 }
@@ -416,7 +417,7 @@ footer a {
 .carte-menu {
   width: 90%;
   max-width: 480px;
-  min-width: 350px;
+  min-width: 340px;
   height: 90px;
   background-color: white;
   border-radius: 18px;
@@ -429,7 +430,6 @@ footer a {
   margin: auto;
   margin-top: 19px;
   margin-bottom: 19px;
-  overflow: hidden;
 }
 .carte-menu :nth-child(1) {
   display: flex;
@@ -438,13 +438,13 @@ footer a {
 }
 .carte-menu h3 {
   font-family: roboto-bold, arial, sans-serif;
-  font-size: 23px;
+  font-size: clamp(18px, 5vw, 23px);
   margin: 0;
   padding: 0;
 }
 .carte-menu p {
   font-family: roboto-light, arial, sans-serif;
-  font-size: 18px;
+  font-size: clamp(14px, 5vw, 18px);
   margin: 0;
   padding: 0;
   margin-top: 4px;
