@@ -1,0 +1,12 @@
+body {
+    animation: body-unlock 100ms 2500ms ease forwards;
+    height: 100%; 
+    overflow: hidden;
+}
+
+@keyframes body-unlock {  
+    100% {
+        height: auto; 
+        overflow: visible;
+    }    
+}
