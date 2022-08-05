@@ -18,20 +18,14 @@ header {
         @include reset-margin-padding;
         padding: 9px 11px;
         margin-top: 5px;
-        position: fixed;
         left:15px;
         border-radius: 6px;
-        background-color: rgba(255, 255, 255, 0.8);
-        z-index: 10;
         font-size: 26px;
         i {
             @include reset-margin-padding;
         }
         a {
             color: $couleur-footer;
-        }
-        &:hover {
-            @include light-shadow;
         }
     }
     &__logo {
