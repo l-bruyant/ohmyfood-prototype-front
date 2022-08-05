@@ -17,12 +17,34 @@
         position: absolute;
         z-index: 1;
         @include reset-margin-padding;
-        font-family: $police-principale-intermediaire;
-        font-size: clamp(20px, 13vw, 80px);
+        font-family: $police-principale-gras;
+        font-size: clamp(20px, 13vw, 66px);
         color: $couleur-secondaire;
         &__letter {
             animation: letters $anim-dur ease infinite;
             animation-direction: alternate;
+            margin:12px;
+            @for $i from 1 through $num-letters {
+                &--#{$i} {
+                    animation-delay: $anim-delay * $i;
+                }
+            }
+        }
+    }
+    &__background-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 0;
+        @include reset-margin-padding;
+        font-family: $police-principale-gras;
+        color: $couleur-primaire;
+        font-size: clamp(20px, 13vw, 66px);
+        &__letter {
+            animation: letters-nocolor $anim-dur ease infinite;
+            animation-direction: alternate;
+            margin:12px;
             @for $i from 1 through $num-letters {
                 &--#{$i} {
                     animation-delay: $anim-delay * $i;
@@ -33,6 +55,21 @@
 }
 
 @keyframes letters {
+    0% {
+        transform: scaleY(1);
+        opacity:1;
+    }
+    50% {
+        transform: scaleY(1.1);
+        opacity:0;
+    }
+    100% {
+        transform: scaleY(1);
+        opacity:1;
+    }
+}
+
+@keyframes letters-nocolor {
     0% {
         transform: scaleY(1);
     }
