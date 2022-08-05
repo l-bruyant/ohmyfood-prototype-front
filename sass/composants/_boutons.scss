@@ -1,0 +1,23 @@
+.bouton-CTA {
+    @include flex-full-center;
+    width: 290px;
+    &--narrow {
+        width: 240px;
+    }
+    a {
+        background-image: $gradient-principal;
+        width:100%;
+        height:64px;
+        font-size: 20px;
+        border-radius: 40px;
+        text-decoration: none;
+        color: white;
+        font-family: $police-principale-intermediaire;
+        @include flex-full-center;
+        @include button-shadow;
+        &:hover {
+            @include heavy-shadow;
+            background-image: $gradient-principal-clair;
+        }
+    }
+}

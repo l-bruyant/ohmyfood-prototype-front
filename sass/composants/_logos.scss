@@ -1,0 +1,23 @@
+.header__logo {
+    margin-top: 16px;
+    img {
+        width:200px;
+        height: 35px;
+    }
+}
+
+.logo-texte {
+    font-family: $police-fantaisie;
+    color: white;
+    font-size: 24px;
+    padding:26px;
+    p {
+        @include reset-margin-padding;
+    }
+}
+
+.icon-rotation {
+    transform: rotate(-45deg);
+    margin-left: -5px;
+    margin-right: 5px;
+}

@@ -1,0 +1,13 @@
+.barre-localisation {
+    height:65px;
+    background-color: $couleur-localisation;
+    color: $couleur-footer;
+    font-family: $police-principale-gras;
+    font-size: 21px;
+    @include full-width;
+    @include flex-full-center;
+    &__icone {
+        margin-right: 18px;
+        font-size: 21px;
+    };
+}

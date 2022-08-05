@@ -1,0 +1,44 @@
+footer {
+    background-color: $couleur-footer;
+    height: 266px;
+    a {
+        color: white;
+    }
+    @media (min-width: 992px) {
+        height:auto;
+        .logo-texte {
+            @include flex-full-center;
+            padding-top: 60px;
+        }
+    }
+}
+
+.liste-footer {
+    padding-left: 26px;
+    font-family: $police-principale-intermediaire;
+    font-size: 20px;
+    &__lien {
+        margin-bottom: 10px;
+        &--avec-icone {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 10px;
+                i {
+                    color: white;
+                    width:30px;
+                    font-size: 17px;
+                }
+        }
+    }
+    @media (min-width: 992px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 60px;
+        > div {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+    }
+}   

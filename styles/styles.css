@@ -667,6 +667,8 @@ a {
 .loader-screen__forward-text__letter {
   animation: letters 1200ms ease infinite;
   animation-direction: alternate;
+  margin: 0;
+  padding: 0;
 }
 .loader-screen__forward-text__letter--1 {
   animation-delay: 133.3333333333ms;
@@ -708,6 +710,8 @@ a {
   font-size: clamp(20px, 13vw, 80px);
 }
 .loader-screen__background-text__letter {
+  margin: 0;
+  padding: 0;
   animation: letters-nocolor 1200ms ease infinite;
   animation-direction: alternate;
 }

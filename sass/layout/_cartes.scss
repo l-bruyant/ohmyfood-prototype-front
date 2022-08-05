@@ -1,0 +1,157 @@
+.carte-etape {
+    width:90%;
+    max-width: 480px;
+    min-width: 250px;
+    height: 96px;
+    @include light-shadow;
+    border-radius: 30px;
+    margin:auto;
+    margin-top:34px;
+    margin-bottom:34px;
+    background-color: $couleur-backgrounds;
+    @include flex-full-center;
+    flex-direction: row;
+    justify-content: flex-start;
+    &__numero {
+        background-color: $couleur-primaire;
+        font-family: $police-principale-intermediaire;
+        border-radius: 50px;
+        height: 32px;
+        width: 32px;
+        margin-left: -16px;
+        color: white;
+        @include flex-full-center;
+    }
+    &__icone {
+        margin-left: 26px;
+        font-size: 24px;
+        color: $couleur-icones;
+    }
+    &__texte {
+        margin-left: 26px;
+        font-family: $police-principale-gras;
+        font-size: 20px;
+    }
+}
+
+.carte-restaurant {
+    background-color: #fff;
+    border-radius: 20px;
+    margin:auto;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    width:90%;
+    height:330px;
+    max-width: 480px;
+    @include light-shadow;
+    &:hover {
+        @include heavy-shadow;
+    }
+    a {
+        text-decoration: none;
+    }
+    &__partie-image  {
+        @include reset-margin-padding;
+        @include flex-full-center;
+        position:relative;
+        width:100%;
+        :nth-child(1) {
+            width:100%;
+            @include reset-margin-padding;
+        }
+        :nth-child(2) {
+            background-color: $couleur-tertiaire;
+            color: $couleur-tertiaire-darker;
+            font-family: $police-principale-gras;
+            font-size: 18px;
+            text-align: center;
+            position: absolute;
+            top:16px;
+            right: 14px;
+            border-radius: 3px;
+            width: 100px;
+            height: 40px;
+            @include flex-full-center;
+        }
+        img {
+        width: 480px;
+		height: 230px;
+		object-fit: cover;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+        object-position: 50% 60%;
+        }
+    }
+    &__partie-informations  {
+        display: flex;
+        justify-content: space-between;
+        padding:16px;
+        align-items: center;
+        color: black;
+        :nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        h3 {
+            font-family: $police-principale-gras;
+            font-size: 23px;
+            @include reset-margin-padding;
+        }
+        p {
+            font-family: $police-principale;
+            font-size: 22px;
+            @include reset-margin-padding;
+            margin-top: 4px;
+        }
+        i {
+            font-size: 34px;
+            margin-right: 16px;
+            margin-bottom: 14px;
+        }
+    }
+}
+
+.carte-menu {
+    width:90%;
+    max-width: 480px;
+    min-width: 340px;
+    height: 90px;
+    background-color: white;
+    border-radius: 18px;
+    @include light-shadow;
+    display: flex;
+    justify-content: space-between;
+    padding:16px;
+    align-items: center;
+    color: black;
+    margin:auto;
+    margin-top: 19px;
+    margin-bottom: 19px;
+        :nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    h3 {
+        font-family: $police-principale-gras;
+        font-size: clamp(18px, 5vw, 23px);
+        @include reset-margin-padding;
+    }
+    p {
+        font-family: $police-principale;
+        font-size: clamp(14px, 5vw, 18px);
+        @include reset-margin-padding;
+        margin-top: 4px;
+    }
+    &__prix {
+        font-size: 34px;
+        margin-right: 16px;
+        margin-top: 28px;
+        p {
+        font-family: $police-principale-gras;
+        font-size: 20px;
+        }
+    }
+
+}

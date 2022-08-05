@@ -1,0 +1,22 @@
+h1, h2 {
+    font-family: $police-principale-gras;
+    font-weight: normal;
+    @include reset-margin-padding;
+}
+
+.titre-section {
+    font-size: 21px;
+    margin-top: 64px;
+    margin-left: 22px;
+    &--police-fantaisie h1 {
+        font-family: $police-fantaisie;
+        font-size: 36px;
+    }
+}
+
+.barre-couleur-tertiaire {
+    background-color: $couleur-tertiaire;
+    height: 3px;
+    width: 50px;
+    margin-top: 4px;
+}
