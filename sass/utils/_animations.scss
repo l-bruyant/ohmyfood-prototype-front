@@ -1,3 +1,33 @@
+.animated-heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &__background {
+        background-image: $gradient-principal;
+        background-size: 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+        position: absolute;
+        z-index: 0;
+        opacity: 1;
+        transform: scale(0);
+        transform-origin: center center;
+        transition: transform 400ms;
+    }
+    &__forward {
+        position: absolute;
+        z-index: 1;
+        &:hover + .animated-heart__background{
+             transform: scale(1);
+             transform-origin: center center;
+        }
+    }   
+}
+
 .loader-screen {
     background-color: white;
     position:fixed;
@@ -10,6 +40,9 @@
     justify-content: center;
     align-items: center;
     animation: fadeout 500ms $loader-duration ease forwards;
+    .fa-regular.fa-heart {
+        position: relative;
+    }
     &__forward-text {
         display: flex;
         justify-content: center;
@@ -90,4 +123,37 @@
         opacity: 0%;
     }
     
+}
+
+.restaurant-menu {
+    animation: bg-color-fade-in 2200ms ease forwards;
+}
+
+@keyframes bg-color-fade-in {
+    0% {
+        background-color:white;
+    }
+    100% {
+        background-color: $couleur-backgrounds;
+    }
+}
+
+.carte-menu {
+    animation: card-appear 800ms ease forwards;
+    opacity: 0;
+    @for $i from 1 through 9 {
+        &--#{$i} {
+            animation-delay: 150ms * $i;
+        }
+    }
+}
+
+@keyframes card-appear {
+    0% {
+        transform: translate(0px, 50px) ;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px) ;
+    }
 }

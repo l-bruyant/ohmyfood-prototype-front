@@ -104,7 +104,7 @@
             @include reset-margin-padding;
             margin-top: 4px;
         }
-        i {
+        .animated-heart {
             font-size: 34px;
             margin-right: 16px;
             margin-bottom: 14px;
@@ -133,16 +133,29 @@
         flex-direction: column;
         justify-content: space-evenly;
     }
-    h3 {
-        font-family: $police-principale-gras;
-        font-size: clamp(18px, 5vw, 23px);
-        @include reset-margin-padding;
-    }
-    p {
-        font-family: $police-principale;
-        font-size: clamp(14px, 5vw, 18px);
-        @include reset-margin-padding;
-        margin-top: 4px;
+    &__textes {
+        &:nth-child(1){
+        width: 80%;
+            h3 {
+                font-family: $police-principale-gras;
+                font-size: 23px;
+                @include reset-margin-padding;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                display: inline-block;
+            }
+            p {
+                font-family: $police-principale;
+                font-size: 18px;
+                @include reset-margin-padding;
+                margin-top: 4px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                display: inline-block;
+            }
+        }
     }
     &__prix {
         font-size: 34px;

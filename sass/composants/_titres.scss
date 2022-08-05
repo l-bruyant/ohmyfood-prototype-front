@@ -8,9 +8,15 @@ h1, h2 {
     font-size: 21px;
     margin-top: 64px;
     margin-left: 22px;
-    &--police-fantaisie h1 {
-        font-family: $police-fantaisie;
-        font-size: 36px;
+    &--police-fantaisie {
+        display: flex;
+        justify-content: space-between;
+        align-content:center;
+        width: 100%;
+        h1 {
+            font-family: $police-fantaisie;
+            font-size: 36px;
+        }
     }
 }
 

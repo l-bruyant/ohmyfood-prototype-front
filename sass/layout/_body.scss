@@ -2,4 +2,6 @@ body {
     width:100%;
     min-width: 350px;
     @include reset-margin-padding;
+    text-overflow: ellipsis;
 }
+
