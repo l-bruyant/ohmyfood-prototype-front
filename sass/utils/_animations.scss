@@ -23,7 +23,8 @@
         &__letter {
             animation: letters $anim-dur ease infinite;
             animation-direction: alternate;
-            @include reset-margin-padding;
+            margin:1px;
+            padding:1px;
             @for $i from 1 through $num-letters {
                 &--#{$i} {
                     animation-delay: $anim-delay * $i;
@@ -42,7 +43,8 @@
         color: $couleur-primaire;
         font-size: clamp(20px, 13vw, 80px);
         &__letter {
-            @include reset-margin-padding;
+            margin:1px;
+            padding:1px;
             animation: letters-nocolor $anim-dur ease infinite;
             animation-direction: alternate;
             @for $i from 1 through $num-letters {
