@@ -30,26 +30,6 @@
             }
         }
     }
-    &__background-text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        z-index: 0;
-        @include reset-margin-padding;
-        font-family: $police-fantaisie;
-        color: $couleur-primaire;
-        font-size: clamp(20px, 13vw, 80px);
-        &__letter {
-            animation: letters $anim-dur ease infinite;
-            animation-direction: alternate;
-            @for $i from 1 through $num-letters {
-                &--#{$i} {
-                    animation-delay: $anim-delay * $i;
-                }
-            }
-        }
-    }
 }
 
 @keyframes letters {
