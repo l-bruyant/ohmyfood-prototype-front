@@ -660,7 +660,7 @@ a {
   z-index: 1;
   margin: 0;
   padding: 0;
-  font-family: shrikhand, arial, sans-serif;
+  font-family: roboto-regular, arial, sans-serif;
   font-size: clamp(20px, 13vw, 80px);
   color: #FF79DA;
 }
@@ -701,7 +701,7 @@ a {
     transform: scaleY(1);
   }
   50% {
-    transform: scaleY(0.9);
+    transform: scaleY(1.1);
   }
   100% {
     transform: scaleY(1);
