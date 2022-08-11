@@ -26,10 +26,9 @@ body {
   min-width: 350px;
   margin: 0;
   padding: 0;
-  text-overflow: ellipsis;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: roboto-bold, arial, sans-serif;
   font-weight: normal;
   margin: 0;
@@ -288,6 +287,42 @@ footer a {
   }
 }
 
+@media (min-width: 992px) {
+  .menu__partie {
+    justify-content: center;
+    padding-bottom: 40px;
+    margin-top: 20px;
+    height: auto;
+  }
+  .menu__partie > div {
+    margin: 16px;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+  .menu__partie .carte-menu {
+    max-width: 240px;
+    min-width: 200px;
+    height: 200px;
+    justify-content: space-between;
+    padding: 0px;
+    margin-top: 19px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+  }
+  .menu__partie .carte-menu h3 {
+    white-space: initial;
+    overflow: hidden;
+  }
+  .menu__partie .carte-menu p {
+    white-space: initial;
+    overflow: hidden;
+  }
+  .menu__partie .carte-menu__prix {
+    position: relative;
+    bottom: -42px;
+  }
+}
 .barre-localisation {
   height: 65px;
   background-color: #EAEAEA;
@@ -433,41 +468,43 @@ footer a {
 }
 
 .carte-menu {
-  width: 90%;
-  max-width: 480px;
-  min-width: 340px;
-  height: 90px;
-  background-color: white;
-  border-radius: 18px;
-  box-shadow: 0px 6px 16px #d8d8d8;
   display: flex;
   justify-content: space-between;
-  padding: 16px;
-  align-items: center;
-  color: black;
+  background-color: #fff;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  height: 90px;
   margin: auto;
   margin-top: 19px;
   margin-bottom: 19px;
+  overflow: hidden;
+  box-shadow: 0px 6px 16px #d8d8d8;
 }
-.carte-menu :nth-child(1) {
+.carte-menu__textes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carte-menu__descriptions {
+  padding: 16px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  overflow: hidden;
+  width: 900px;
+  min-width: 100px;
 }
-.carte-menu__textes:nth-child(1) {
-  width: 80%;
-}
-.carte-menu__textes:nth-child(1) h3 {
-  font-family: roboto-bold, arial, sans-serif;
-  font-size: 23px;
+.carte-menu__descriptions h3 {
   margin: 0;
   padding: 0;
+  font-family: roboto-bold, arial, sans-serif;
+  font-size: 23px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
 }
-.carte-menu__textes:nth-child(1) p {
+.carte-menu__descriptions p {
   font-family: roboto-light, arial, sans-serif;
   font-size: 18px;
   margin: 0;
@@ -479,13 +516,20 @@ footer a {
   display: inline-block;
 }
 .carte-menu__prix {
-  font-size: 34px;
-  margin-right: 16px;
-  margin-top: 28px;
-}
-.carte-menu__prix p {
-  font-family: roboto-bold, arial, sans-serif;
   font-size: 20px;
+  margin-right: 28px;
+  margin-top: 36px;
+  font-family: roboto-bold, arial, sans-serif;
+}
+.carte-menu__check {
+  background-color: #99E2D0;
+  color: white;
+  font-size: 30px;
+  width: 100px;
+  border-radius: 0px 20px 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .presentation {
@@ -571,41 +615,6 @@ footer a {
     margin-left: 35px;
     margin-right: 35px;
   }
-  .menu__partie .carte-menu {
-    max-width: 255px;
-    min-width: 100px;
-    height: 200px;
-    justify-content: space-between;
-    padding: 0px;
-    padding-left: 24px;
-    margin-top: 19px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 0px;
-  }
-  .menu__partie .carte-menu__textes h3 {
-    text-overflow: initial;
-    white-space: normal;
-    overflow: wrap;
-    width: auto;
-    display: flex;
-  }
-  .menu__partie .carte-menu__textes p {
-    text-overflow: initial;
-    white-space: normal;
-    overflow: wrap;
-    width: auto;
-    display: flex;
-  }
-  .menu__partie .carte-menu__prix {
-    margin-right: 16px;
-    margin-top: auto;
-    padding-bottom: 10px;
-  }
-  .menu__partie .carte-menu__prix p {
-    font-family: roboto-bold, arial, sans-serif;
-    font-size: 26px;
-  }
 }
 .menu__partie-titre {
   margin-left: 20px;
@@ -622,6 +631,7 @@ footer a {
   }
 }
 .menu__call-to-action {
+  margin: auto;
   margin-top: 40px;
 }
 
@@ -839,6 +849,31 @@ a {
     opacity: 1;
   }
 }
+.carte-menu__check {
+  transform: translate(100px);
+  transform-origin: right;
+  transition: all 400ms ease-in-out;
+}
+
+.carte-menu__textes {
+  width: 100%;
+  padding-right: 0px;
+  transition: width 400ms ease-in-out;
+}
+.carte-menu i {
+  transform: rotate(-270deg);
+  transition: transform 200ms 200ms ease-in-out;
+}
+.carte-menu:hover .carte-menu__textes {
+  width: 80%;
+}
+.carte-menu:hover .carte-menu__check {
+  transform: translate(0px);
+}
+.carte-menu:hover i {
+  transform: rotate(0deg);
+}
+
 .carte-menu {
   animation: card-appear 800ms ease forwards;
   opacity: 0;

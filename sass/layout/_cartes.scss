@@ -113,58 +113,62 @@
 }
 
 .carte-menu {
-    width:90%;
-    max-width: 480px;
-    min-width: 340px;
-    height: 90px;
-    background-color: white;
-    border-radius: 18px;
-    @include light-shadow;
     display: flex;
     justify-content: space-between;
-    padding:16px;
-    align-items: center;
-    color: black;
-    margin:auto;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    height: 90px;
+    margin: auto;
     margin-top: 19px;
     margin-bottom: 19px;
-        :nth-child(1) {
+    overflow: hidden;
+    @include light-shadow;
+    &__textes {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__descriptions {
+        padding: 16px;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-    }
-    &__textes {
-        &:nth-child(1){
-        width: 80%;
-            h3 {
-                font-family: $police-principale-gras;
-                font-size: 23px;
-                @include reset-margin-padding;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
-                display: inline-block;
-            }
-            p {
-                font-family: $police-principale;
-                font-size: 18px;
-                @include reset-margin-padding;
-                margin-top: 4px;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
-                display: inline-block;
-            }
+        overflow: hidden;
+        width: 900px;
+        min-width: 100px;
+        h3 {
+            @include reset-margin-padding;
+            font-family: roboto-bold, arial, sans-serif;
+            font-size: 23px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+        }
+        p {
+            font-family: roboto-light, arial, sans-serif;
+            font-size: 18px;
+            @include reset-margin-padding;
+            margin-top: 4px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
         }
     }
     &__prix {
-        font-size: 34px;
-        margin-right: 16px;
-        margin-top: 28px;
-        p {
-        font-family: $police-principale-gras;
         font-size: 20px;
-        }
+        margin-right: 28px;
+        margin-top: 36px;
+        font-family: roboto-bold, arial, sans-serif;
     }
-
+    &__check {
+        background-color: $couleur-tertiaire;
+        color: white;
+        font-size: 30px;
+        width: 100px;
+        border-radius: 0px 20px 20px 0px;
+        @include flex-full-center;
+    }
 }

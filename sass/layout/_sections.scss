@@ -124,3 +124,40 @@
         }
     }
 }
+
+@media (min-width: 992px) {
+    .menu__partie {
+      justify-content: center;
+      padding-bottom: 40px;
+      margin-top: 20px;
+      height: auto;
+    }
+    .menu__partie > div {
+      margin: 16px;
+      margin-left: 35px;
+      margin-right: 35px;
+    }
+    .menu__partie .carte-menu {
+      max-width: 240px;
+      min-width: 200px;
+      height: 200px;
+      justify-content: space-between;
+      padding: 0px;
+      margin-top: 19px;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-bottom: 0px;
+      h3 {
+        white-space:initial;
+        overflow:hidden;
+      }
+      p {
+        white-space:initial;
+        overflow:hidden;
+      }
+      &__prix {
+        position: relative;
+        bottom: -42px;
+      }
+    }
+  }

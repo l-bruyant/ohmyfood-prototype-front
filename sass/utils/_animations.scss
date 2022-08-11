@@ -150,7 +150,34 @@
         opacity: 1;
     }
 }
+ 
 
+.carte-menu__check {
+    transform: translate(100px);
+    transform-origin: right;
+    transition: all 400ms ease-in-out;
+}
+
+.carte-menu {
+    &__textes {
+        width:100%;
+        padding-right: 0px;
+        transition: width 400ms ease-in-out;
+    }
+    i {
+        transform: rotate(-270deg);
+        transition: transform 200ms 200ms ease-in-out;
+    }
+    &:hover .carte-menu__textes {
+        width: 80%;
+    }
+    &:hover .carte-menu__check {
+        transform: translate(0px);
+    }
+    &:hover i {
+        transform: rotate(0deg);
+    }
+}
 
 .carte-menu {
     animation: card-appear 800ms ease forwards;
