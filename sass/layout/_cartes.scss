@@ -45,7 +45,7 @@
     max-width: 480px;
     @include light-shadow;
     &:hover {
-        @include heavy-shadow;
+        @include medium-shadow;
     }
     a {
         text-decoration: none;

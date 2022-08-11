@@ -4,6 +4,9 @@
     align-items: center;
     position: relative;
     left:-14px;
+    @media (min-width: 992px) {
+    left: 0px;    
+    }
         &__background {
         background-image: $gradient-principal;
         background-size: 100%;
