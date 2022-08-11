@@ -16,10 +16,10 @@ h1, h2, h3 {
         h1 {
             font-family: $police-fantaisie;
             font-size: 36px;
+            padding-right:40px;
         }
     }
 }
-
 .barre-couleur-tertiaire {
     background-color: $couleur-tertiaire;
     height: 3px;

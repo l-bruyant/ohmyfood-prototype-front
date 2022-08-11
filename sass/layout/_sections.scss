@@ -126,7 +126,11 @@
 }
 
 .restaurant-menu--long {
-    height: 1690px;
+    height: 1720px;
+    @media (min-width: 992px) {
+        margin-bottom: 0px;
+        height: auto;
+    }
 }
 
 @media (min-width: 992px) {

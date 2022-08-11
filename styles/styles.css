@@ -49,6 +49,7 @@ h1, h2, h3 {
 .titre-section--police-fantaisie h1 {
   font-family: shrikhand, arial, sans-serif;
   font-size: 36px;
+  padding-right: 40px;
 }
 
 .barre-couleur-tertiaire {
@@ -290,7 +291,13 @@ footer a {
 }
 
 .restaurant-menu--long {
-  height: 1690px;
+  height: 1720px;
+}
+@media (min-width: 992px) {
+  .restaurant-menu--long {
+    margin-bottom: 0px;
+    height: auto;
+  }
 }
 
 @media (min-width: 992px) {
