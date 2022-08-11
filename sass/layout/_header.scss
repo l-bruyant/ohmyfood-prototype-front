@@ -21,9 +21,10 @@ header {
         @include reset-margin-padding;
         padding: 9px 11px;
         margin-top: 5px;
+        position: relative;
         left:15px;
         border-radius: 6px;
-        font-size: 26px;
+        font-size: 28px;
         i {
             @include reset-margin-padding;
         }

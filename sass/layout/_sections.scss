@@ -72,14 +72,14 @@
                 .titre-et-lieu {
                     h3 {
                         text-overflow: ellipsis;
-                        white-space: nowrap;
+                        white-space: initial;
                         overflow: hidden;
                         width: 120px;
                         display: inline-block;
                     }
                     p {
                         text-overflow: ellipsis;
-                        white-space: nowrap;
+                        white-space: initial;
                         overflow: hidden;
                         width: 120px;
                         display: inline-block;
@@ -101,28 +101,32 @@
     }
 }
 
-#menu-1 {
-    &__couverture {
-        img {
-            width:100%;
-            height: 340px;
-            object-fit: cover;
-            object-position: 50% 60%;
-        }
+.image-couverture-menu {
+    img {
+        width:100%;
+        height: 340px;
+        object-fit: cover;
+        object-position: 50% 60%;
     }
-    &__menu {
-        background-color: $couleur-backgrounds;
-        border-top-left-radius: 62px;
-        border-top-right-radius: 62px;
-        height: 1600px;
-        margin-top: -55px;
-        position:relative;
-        z-index: 0;
-        @media (min-width: 992px) {
-            height:auto;
-            padding-bottom: 120px;
-        }
+}
+
+
+.restaurant-menu {
+    background-color: $couleur-backgrounds;
+    border-top-left-radius: 62px;
+    border-top-right-radius: 62px;
+    height: 1600px;
+    margin-top: -55px;
+    position:relative;
+    z-index: 0;
+    @media (min-width: 992px) {
+        height:auto;
+        padding-bottom: 120px;
     }
+}
+
+.restaurant-menu--long {
+    height: 1690px;
 }
 
 @media (min-width: 992px) {

@@ -140,7 +140,7 @@
         h3 {
             @include reset-margin-padding;
             font-family: roboto-bold, arial, sans-serif;
-            font-size: 23px;
+            font-size: 24px;
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
@@ -148,7 +148,7 @@
         }
         p {
             font-family: roboto-light, arial, sans-serif;
-            font-size: 18px;
+            font-size: 19px;
             @include reset-margin-padding;
             margin-top: 4px;
             text-overflow: ellipsis;
@@ -158,9 +158,9 @@
         }
     }
     &__prix {
-        font-size: 20px;
+        font-size: 21px;
         margin-right: 28px;
-        margin-top: 36px;
+        margin-top: 38px;
         font-family: roboto-bold, arial, sans-serif;
     }
     &__check {

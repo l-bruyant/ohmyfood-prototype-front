@@ -3,7 +3,8 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    &__background {
+    left:-14px;
+        &__background {
         background-image: $gradient-principal;
         background-size: 100%;
         background-clip: text;
@@ -16,11 +17,15 @@
         opacity: 1;
         transform: scale(0);
         transform-origin: center center;
-        transition: transform 400ms;
+        transition: transform 400ms ease;
     }
     &__forward {
         position: absolute;
         z-index: 1;
+        transition: opacity 400ms ease-out;
+        &:hover {
+            opacity: 0;
+        }
         &:hover + .animated-heart__background{
              transform: scale(1);
              transform-origin: center center;

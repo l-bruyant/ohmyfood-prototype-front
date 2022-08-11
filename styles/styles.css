@@ -90,9 +90,10 @@ header {
   padding: 0;
   padding: 9px 11px;
   margin-top: 5px;
+  position: relative;
   left: 15px;
   border-radius: 6px;
-  font-size: 26px;
+  font-size: 28px;
 }
 .top-bar__back-button i {
   margin: 0;
@@ -242,14 +243,14 @@ footer a {
   }
   #page-accueil__restaurants .carte-restaurant__partie-informations .titre-et-lieu h3 {
     text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: initial;
     overflow: hidden;
     width: 120px;
     display: inline-block;
   }
   #page-accueil__restaurants .carte-restaurant__partie-informations .titre-et-lieu p {
     text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: initial;
     overflow: hidden;
     width: 120px;
     display: inline-block;
@@ -265,13 +266,14 @@ footer a {
   }
 }
 
-#menu-1__couverture img {
+.image-couverture-menu img {
   width: 100%;
   height: 340px;
   object-fit: cover;
   object-position: 50% 60%;
 }
-#menu-1__menu {
+
+.restaurant-menu {
   background-color: #F6F6F6;
   border-top-left-radius: 62px;
   border-top-right-radius: 62px;
@@ -281,10 +283,14 @@ footer a {
   z-index: 0;
 }
 @media (min-width: 992px) {
-  #menu-1__menu {
+  .restaurant-menu {
     height: auto;
     padding-bottom: 120px;
   }
+}
+
+.restaurant-menu--long {
+  height: 1690px;
 }
 
 @media (min-width: 992px) {
@@ -498,7 +504,7 @@ footer a {
   margin: 0;
   padding: 0;
   font-family: roboto-bold, arial, sans-serif;
-  font-size: 23px;
+  font-size: 24px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -506,7 +512,7 @@ footer a {
 }
 .carte-menu__descriptions p {
   font-family: roboto-light, arial, sans-serif;
-  font-size: 18px;
+  font-size: 19px;
   margin: 0;
   padding: 0;
   margin-top: 4px;
@@ -516,9 +522,9 @@ footer a {
   display: inline-block;
 }
 .carte-menu__prix {
-  font-size: 20px;
+  font-size: 21px;
   margin-right: 28px;
-  margin-top: 36px;
+  margin-top: 38px;
   font-family: roboto-bold, arial, sans-serif;
 }
 .carte-menu__check {
@@ -632,7 +638,7 @@ footer a {
 }
 .menu__call-to-action {
   margin: auto;
-  margin-top: 40px;
+  margin-top: 46px;
 }
 
 .bouton-CTA {
@@ -697,6 +703,7 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
+  left: -14px;
 }
 .animated-heart__background {
   background-image: linear-gradient(340deg, #9356DC 0%, #FF79DA 100%);
@@ -711,11 +718,15 @@ a {
   opacity: 1;
   transform: scale(0);
   transform-origin: center center;
-  transition: transform 400ms;
+  transition: transform 400ms ease;
 }
 .animated-heart__forward {
   position: absolute;
   z-index: 1;
+  transition: opacity 400ms ease-out;
+}
+.animated-heart__forward:hover {
+  opacity: 0;
 }
 .animated-heart__forward:hover + .animated-heart__background {
   transform: scale(1);
